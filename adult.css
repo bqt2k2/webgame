@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", serif;
+    font-size: 17px;
+    background-color: #A7C7E7; 
+}
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Khoảng cách giữa các phần tử bằng nhau */
+    flex-direction: row; /* Để các phần tử nằm ngang */
+    min-height: 50%;
+    border: 1px solid rgb(35, 34, 34);
+    padding: 25px;
+    width: clamp(300px, 55%, 500px);
+    margin: 20vh auto;
+    border-radius: 10px;
+    background: #fff;
+}
+h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500px;
+}
+#content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#form-input{
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#form-input input{
+    height: 35px;
+    width: 99%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: inherit;
+}
+#form-input label{
+    position: absolute;
+    padding: 5px 15px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out ;
+}
+#design {
+    background: url('https://i.pinimg.com/originals/e1/17/d8/e117d82301fe558be6cc11fe36785c65.jpg') no-repeat center;
+    background-size: cover; /* Để ảnh lấp đầy phần tử */
+    width: 50%; /* Giúp chia bố cục cân đối hơn */
+    min-height: 250px; /* Đảm bảo không bị quá nhỏ */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#form-input input:focus{
+    border: 2px solid #FFB6C1;
+    outline: none;
+    transition: all 0.3s ease-in-out ;
+}
+#form-input input:focus + label{
+    color: #FFB6C1;
+}
+#form-input input:focus + label ,#form-input input:valid +label{
+    top: 1px;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 500;
+}
+input#btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(135deg, #FFB6C1, #FFA1B5);
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+input#btn-login:hover{
+    opacity: 0.8;
+}
+a {
+    display: inline-block;
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    font-size: 14px;
+    color: #FF6B8A; /* Màu hồng pastel */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+    margin-top: 10px; /* Để cách xa input */
+    margin-bottom: 10px;
+}
+
+a:hover {
+    color: #D63A5E; /* Màu hồng đậm hơn khi hover */
+    transform: scale(1.05); /* Tăng nhẹ kích thước */
+    text-decoration: underline; /* Gạch chân khi hover */
+}

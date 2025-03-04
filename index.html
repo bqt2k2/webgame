@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ảnh nền chính */
+        /* Ảnh nền chính với hiệu ứng mờ nhẹ */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.webp') repeat;
+            background-size: 150px 150px;
+            filter: blur(2px);
+            /* Làm mờ nhẹ */
+            opacity: 0.85;
+            /* Độ trong suốt nhẹ */
+            animation: moveDiagonal 10s linear infinite;
+            z-index: -1;
+        }
+
+        /* Hiệu ứng nền di chuyển */
+        @keyframes moveDiagonal {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 200px 200px;
+                /* Di chuyển nền theo đường chéo */
+            }
+        }
+
+        body {
+            font-size: 17px;
+            font-family: "Montserrat", serif;
+        }
+
+        #wrapper {
+            display: column;
+            align-items: center;
+            /* Để các phần tử nằm ngang */
+            min-height: 50%;
+            border: 1px solid rgb(35, 34, 34);
+            padding: 25px;
+            width: clamp(300px, 55%, 700px);
+            margin: 20vh auto;
+            border-radius: 10px;
+            background: #67a0e1;
+            color: aliceblue;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+
+        #content {
+            display: flex;
+            align-items: center;
+        }
+
+        #content div {
+            flex: 1;
+            /* Mỗi cột chiếm phần bằng nhau */
+            padding: 5px;
+        }
+
+        #content button {
+            text-align: center;
+            align-self: flex-end;
+            padding: 5px;
+        }
+        button {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient mềm mại */
+    color: white;
+    border: 2px solid #b0449d;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng hover cho button */
+button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Căn chỉnh thẻ <a> bên trong button */
+button a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hiệu ứng khi hover vào link */
+button a:hover {
+    color: white;
+    background: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>CHÀO MỪNG ĐẾN VỚI TH GAME</h1>
+        <label for="">giải trí nhưng có kiến thứ<!--[if !IE]><!--><!--<![endif]--></label>
+        <div id="content">
+            <div id="pass-login">
+                <H3>BẠN ĐÃ CÓ TÀI KHOẢN</H1>
+                    <button>
+                        <a href="login.html">ĐĂNG NHẬP</a>
+                    </button>
+            </div>
+            <div id="pass-register">
+                <H3>BẠN ĐÃ CHƯA CÓ TÀI KHOẢN</H1>
+                    <button>
+                        <a href="register.html">ĐĂNG KÝ</a>
+                    </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
